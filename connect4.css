@@ -1,0 +1,219 @@
+
+
+h1 {
+  margin: 20px auto 0px;
+  text-align: center;
+  font-size: 3rem;
+  font-family: Righteous;
+}
+
+h2 { 
+  text-align: center;
+  font-size: 1rem;
+}
+
+/*
+* Container to arrange each third of the page
+* Adapted from www.css-tricks.com
+* https://css-tricks.com/centering-css-complete-guide/
+* Written by Chris Coyier 09/02/2014
+*/
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  margin: 20px 0;
+  padding: 10px;
+}
+
+main div {
+  margin: 0 auto;
+}
+
+main > div {
+  font-family: Righteous;
+}
+
+/*
+* Container to spread color options evenly in the div
+* Adapted from www.css-tricks.com
+* https://css-tricks.com/equidistant-objects-with-css/
+*/
+
+.eqi-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*
+** Style for game board
+*/
+#game table {
+  margin: auto;
+  border-spacing: 1em;
+  background-color: cornflowerblue;
+  border: solid 3px black;
+}
+
+/*
+** Style for table, header and game
+*/
+
+div #header {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+} 
+
+#header table {
+  margin: 0 auto;
+  border-spacing: 1em;
+}
+
+#header-row td{
+  background-color: lightgray;
+  border: dashed 1px gray;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+/* column-top is table row of clickable areas for each column */
+
+#header-row #column-top td:hover {
+  background-color: gold;
+  margin: 5px;
+}
+
+table tr td {
+  background-color: whitesmoke;
+  width: 60px;
+  height: 60px;
+  border: solid 1px #666;
+  border-radius: 50%;
+}
+
+/* @bo */
+
+/* 
+** pieces are div within game table cells drawn as colored circles
+** Pieces are absolutely positioned, no space is reserved in the document
+** Pieces are initially placed above the view window so that they appear to fall into the board
+*/
+
+.piece {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  position: absolute;
+  top: -67px;
+  transition: .1s;
+  transition: transform .3s;
+  z-index: 5;
+  transition-timing-function: ease-in;
+}
+
+
+/*
+** Button Styles
+*/
+
+button {
+  /* position: relative; */
+  font-size: 1rem;
+  margin: 20px auto;
+  display: block;
+  cursor: pointer;
+}
+
+#start, #reset {
+  border-radius: 50%;
+  height: 100px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#start {
+  background-color: forestgreen;
+}
+
+#reset {
+  background-color: orangered;
+}
+
+/*
+** Class for player color selections
+*/
+.color {
+  display: inline-block;
+  justify-content: space-between;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: solid 1px black;
+  margin:10px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+#red {
+  background-color: red;
+}
+
+#orange {
+  background-color: orange;
+}
+
+#yellow {
+  background-color: gold;
+}
+
+#green {
+  background-color: green;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#purple {
+  background-color: purple;
+}
+
+.expand {
+  transform: scale(150%);
+}
+
+/*
+** Score Board Styling
+*/
+
+.score-board {
+  background-color: #006304;
+  border: solid 15px chocolate;
+  color: white;
+  height: 250px;
+  font-family: Rock Salt;
+}
+
+.score-board div {
+  position: relative;
+  width: 204px;
+  text-align: center;
+  font-family: Homemade Apple;
+  font-size: 1.5rem;
+}
+
+
+

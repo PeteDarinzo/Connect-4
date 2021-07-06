@@ -1,0 +1,66 @@
+<!doctype html>
+
+<head>
+  <title>Connect 4</title>
+  <link href="connect4.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Righteous&family=Rock+Salt&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <h1>CONNECT FOUR</h1>
+
+  <main class="flex-center">
+    <div>
+      <label for="p1-color">PLAYER 1 COLOR</label>
+      <div id="p1-color" class="eqi-container">
+        <span class="color" id="red"></span>
+        <span class="color" id="orange"></span>
+        <span class="color" id="yellow"></span>
+      </div>
+
+      <label for="p2-color">PLAYER 2 COLOR</label>
+      <div id="p2-color" class="eqi-container">
+        <span class="color" id="green"></span>
+        <span class="color" id="blue"></span>
+        <span class="color" id="purple"></span>
+      </div>
+
+      <form>
+        <div>
+          <button id="start">START GAME!</button>
+        </div>
+        <div>
+          <button id="reset">RESET GAME!</button>
+        </div>
+      </form>
+    </div>
+
+    <div>
+      <div id="header">
+        <table id="header-row"></table>
+      </div>
+
+      <div id="game">
+        <table id="board"></table>
+      </div>
+    </div>
+
+    <div class="score-board">
+      <h2>SCOREBOARD</h2>
+      <div id="p1-score">Player 1: 0</div>
+      <div id="p2-score">Player 2: 0</div>
+      <div>
+        <button id="erase-button">Erase Score Board</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="connect4.js"></script>
+
+</body>
+
+</html>
