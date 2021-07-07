@@ -31,14 +31,13 @@ let p2Color = "yellow";
 let p1WinCount = 0;
 let p2WinCount = 0;
 let gameInProgress = false;
-
+let boardClear = true;
 
 /*
 * Event Handlers For Color Selection, Start, Rest, and Scoreboard Erase Buttons
 */
 
 playerOneColor.addEventListener("click", (e) => {
-  console.log(e.target.tagName);
   // players can only change colors if a game is not in progress
   // also ensure CSS properties only take affect when a click is placed in a color span
   if (!gameInProgress && e.target.tagName === "SPAN") {
@@ -71,14 +70,26 @@ eraseButton.addEventListener("click", () => {
 
 startButton.addEventListener("click", (e) => {
   e.preventDefault();
-  gameInProgress = true;
+
+  // if board is clear:
+  // the game has just been initialized or,
+  // the reset button has been pushed
+  // make the sure the board is clear, then set the gameInProgress and boardClear booleans
+  if (boardClear) {
+    gameInProgress = true;
+    boardClear = false;
+    startButton.innerText = "GAME \n RUNNING!";
+  }
 });
 
 
 resetButton.addEventListener("click", (e) => {
   e.preventDefault();
   clearBoard();
-  gameInProgress = false;
+  // board has been cleared, reset boolean so a new game can be started
+  boardClear = true;
+  resetButton.classList.remove("button-glow");
+  startButton.innerHTML = "START GAME!"
 });
 
 
@@ -249,7 +260,8 @@ function placeInTable(y, x) {
 function endGame(msg) {
   setTimeout(() => {
     alert(msg);
-  }, 400);
+    resetButton.classList.add("button-glow");
+  }, 500);
   gameInProgress = false;
 }
 

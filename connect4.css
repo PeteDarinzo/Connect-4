@@ -142,7 +142,17 @@ button {
 }
 
 #reset {
-  background-color: orangered;
+  background-color: #494b4b;
+}
+
+.button-glow {
+  text-shadow: 
+  0 0 7px red,
+  0 0 10px #fff,
+  0 0 7px #fff,
+  0 0 21px #fff,
+  0 0 42px red,
+  0 0 82px red;
 }
 
 /*
