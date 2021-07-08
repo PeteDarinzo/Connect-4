@@ -105,8 +105,8 @@ resetButton.addEventListener("click", (e) => {
 function restoreScoreBoard() {
   const json = localStorage.getItem("connect-four-scores");
   if (json) {
-    p1WinCount = JSON.parse(localStorage.getItem("connect-four-scores")).p1;
-    p2WinCount = JSON.parse(localStorage.getItem("connect-four-scores")).p2;
+    p1WinCount = JSON.parse(json).p1;
+    p2WinCount = JSON.parse(json).p2;
   } else {
     localStorage.setItem("connect-four-scores", JSON.stringify({ "p1": 0, "p2": 0 }));
   }
