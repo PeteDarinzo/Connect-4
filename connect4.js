@@ -138,7 +138,7 @@ function makeBoard() {
   for (let row = 0; row < HEIGHT; row++) {
     board.push([]);
     for (let col = 0; col < WIDTH; col++) {
-      board[row].push("null");
+      board[row].push(null);
     }
   }
 }
@@ -219,7 +219,7 @@ function makeHtmlBoard() {
 /** findSpotForCol: given column x, return top empty y (null if filled) */
 function findSpotForCol(x) {
   for (let y = 0; y < HEIGHT; y++) {
-    if (board[y][x] === "null") {
+    if (board[y][x] === null) {
       return y;
     }
   }
@@ -274,7 +274,7 @@ const updateBoardModel = (y, x) => currPlayer === "p1" ? board[y][x] = "p1" : bo
 
 const isRowFull = (row) => {
   return row.every((cell) => {
-    return cell != "null";
+    return cell != null;
   });
 }
 
